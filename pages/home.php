@@ -10,7 +10,7 @@
             <div class="carousel-caption d-none d-md-block">
                 <h5> <?= $slider['title'] ?> </h5>
                 <p><?= $slider['description'] ?></p>
-                <a href="route.php?page=detail" class="btn btn-danger">Read More >></a>
+                <a href="route.php?page=detail&&id=<?= $slider['id']; ?>" class="btn btn-danger">Read More >></a>
             </div>
             </div>
             <?php endforeach ?>

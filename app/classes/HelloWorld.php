@@ -5,7 +5,7 @@ use App\classes\product;
 use App\classes\slider;
 
 class HelloWorld {
-    public $message, $product, $products=[], $slider, $sliders=[];
+    public $message, $product, $products=[], $slider, $sliders=[], $singleSlider;
 
     public function __construct()
     {
@@ -14,10 +14,10 @@ class HelloWorld {
 
     public function index()
     {
-        $product = new Product();
+        $product = new product();
         $this->products = $this->product->getAllProduct();
 
-        $slider = new Slider();
+        $slider = new slider();
         $this->sliders = $this->slider->getAllSlider();
         return view('home', ['products' => $this->products, 'sliders' => $this->sliders]);
     }
@@ -32,8 +32,10 @@ class HelloWorld {
         return view('contact');
     }
 
-    public function detail()
+    public function detail($id)
     {
+        $this->slider = new slider();
+        $this->singleSlider = $this->slider->getSliderById($id);
         return view('detail');
     }
 
