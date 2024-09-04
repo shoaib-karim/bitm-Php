@@ -19,3 +19,8 @@ elseif ($_GET['page'] == 'contact')
 {
     $helloWorld->contact();
 }
+
+elseif ($_GET['page'] == 'detail')
+{
+    $helloWorld->detail();
+}

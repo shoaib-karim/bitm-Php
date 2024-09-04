@@ -32,5 +32,10 @@ class HelloWorld {
         return view('contact');
     }
 
+    public function detail()
+    {
+        return view('detail');
+    }
+
 }
 
