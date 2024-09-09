@@ -32,6 +32,11 @@ class HelloWorld {
         return view('contact');
     }
 
+    public function Login()
+    {
+        return view('login');
+    }
+
     public function detail($id)
     {
         $this->slider = new slider();
