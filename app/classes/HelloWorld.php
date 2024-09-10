@@ -1,23 +1,25 @@
 <?php
 
 namespace App\classes;
+
 use App\classes\product;
 use App\classes\slider;
 
-class HelloWorld {
-    public $message, $product, $products=[], $slider, $sliders=[], $singleSlider;
+class HelloWorld
+{
+    public $message, $product, $products = [], $slider, $sliders = [], $singleSlider;
 
     public function __construct()
     {
-        $this-> message = "Yo Bro";  
+        $this->message = "Yo Bro";
     }
 
     public function index()
     {
-        $product = new product();
-        $this->products = $this->product->getAllProduct();
+        $this->product = new product();
+        $this->products = $this->product->getAllProducts();
 
-        $slider = new slider();
+        $this->slider = new slider();
         $this->sliders = $this->slider->getAllSlider();
         return view('home', ['products' => $this->products, 'sliders' => $this->sliders]);
     }
@@ -43,6 +45,4 @@ class HelloWorld {
         $this->singleSlider = $this->slider->getSliderById($id);
         return view('detail');
     }
-
 }
-

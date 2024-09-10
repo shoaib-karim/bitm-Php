@@ -2,10 +2,12 @@
 
 namespace App\classes;
 
-class slider {
+class slider
+{
 
     public $sliders = [];
-    public function __construct(){
+    public function __construct()
+    {
         $this->sliders = [
             0 => [
                 'id' => '0',
@@ -20,7 +22,7 @@ class slider {
                 'description' => 'Lorem ipsum',
             ],
             2 => [
-                'id' => '3',
+                'id' => '2',
                 'img' => 'assets/images/4.jpg',
                 'title' => '3rd Slide',
                 'description' => 'Lorem ipsum',
@@ -28,14 +30,15 @@ class slider {
         ];
     }
 
-    public function getAllSlider(){
+    public function getAllSlider()
+    {
         return $this->sliders;
     }
 
-    public function getSliderById($id){
+    public function getSliderById($id)
+    {
         foreach ($this->sliders as $slider) {
-            if ($slider['id'] == $id)
-            {
+            if ($slider['id'] == $id) {
                 return $slider;
             }
         }

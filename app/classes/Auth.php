@@ -1,9 +1,10 @@
-<?php 
+<?php
 
 namespace App\Classes;
+
 use App\Classes\User;
 
-class Auth 
+class Auth
 {
     public $email, $password, $user, $users = [], $status;
 
@@ -19,22 +20,17 @@ class Auth
         $this->users = $this->user->getAllUser();
         $this->status = false;
 
-        foreach ($this->users as $user)
-        {
-            if($user['email'] == $this->email && $user['password'] == $this->password)
-            {
+        foreach ($this->users as $user) {
+            if ($user['email'] == $this->email && $user['password'] == $this->password) {
                 $this->status = true;
                 break;
-            } 
+            }
         }
 
-        if ($this->status)
-        {
+        if ($this->status) {
             header('location: route.php?page=dashboard');
-        }
-        else 
-        {
+        } else {
             header('location: route.php?page=login&&message=Invalid Credentials.');
-        }  
+        }
     }
 }
