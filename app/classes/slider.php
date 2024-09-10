@@ -14,18 +14,21 @@ class slider
                 'img' => 'assets/images/2.jpg',
                 'title' => '1st Slide',
                 'description' => 'Lorem ipsum',
+                'price' => '10',
             ],
             1 => [
                 'id' => '1',
                 'img' => 'assets/images/3.jpg',
                 'title' => '2nd Slide',
                 'description' => 'Lorem ipsum',
+                'price' => '20',
             ],
             2 => [
                 'id' => '2',
                 'img' => 'assets/images/4.jpg',
                 'title' => '3rd Slide',
                 'description' => 'Lorem ipsum',
+                'price' => '30',
             ],
         ];
     }

@@ -43,6 +43,6 @@ class HelloWorld
     {
         $this->slider = new slider();
         $this->singleSlider = $this->slider->getSliderById($id);
-        return view('detail');
+        return view('detail', ['slider' => $this->singleSlider]);
     }
 }
