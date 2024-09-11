@@ -27,11 +27,11 @@
                         <div class="row mb-3">
                             <label class="col-md-3">Your Choice</label>
                             <div class="col-md-9">
-                                <label><input type="radio" name="choice" value="+">+</label>
-                                <label><input type="radio" name="choice" value="-">-</label>
-                                <label><input type="radio" name="choice" value="*">*</label>
-                                <label><input type="radio" name="choice" value="/">/</label>
-                                <label><input type="radio" name="choice" value="%">%</label>
+                                <label><input type="radio" name="choice" value="+"> +</label>
+                                <label><input type="radio" name="choice" value="-"> -</label>
+                                <label><input type="radio" name="choice" value="*"> *</label>
+                                <label><input type="radio" name="choice" value="/"> /</label>
+                                <label><input type="radio" name="choice" value="%"> %</label>
                             </div>
                         </div>
 
