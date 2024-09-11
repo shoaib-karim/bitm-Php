@@ -23,6 +23,10 @@ class Auth
         foreach ($this->users as $user) {
             if ($user['email'] == $this->email && $user['password'] == $this->password) {
                 $this->status = true;
+                session_start();
+                $_SESSION['id'] = $user['id'];
+                $_SESSION['name'] = $user['name'];
+
                 break;
             }
         }

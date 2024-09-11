@@ -25,7 +25,7 @@
           <a class="nav-link" href="route.php?page=about">About</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="route.php?page=about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Services
           </a>
           <ul class="dropdown-menu">
@@ -36,14 +36,24 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="route.php?page=about">Gallery</a>
+          <a class="nav-link" href="route.php?page=gallery">Gallery</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="route.php?page=contact">Contact</a>
         </li>
+
+        <?php 
+        
+        if(isset($_SESSION['id'])) {
+        ?>
+        <li class="nav-item">
+          <a class="nav-link" href="route.php?page=logout">Logout</a>
+        </li>
+        <?php } else { ?>
         <li class="nav-item">
           <a class="nav-link" href="route.php?page=login">Login</a>
-        </li>
+        </li> <?php } ?>
+        
 
       </ul>
       <form class="d-flex" role="search">

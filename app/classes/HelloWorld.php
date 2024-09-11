@@ -11,11 +11,13 @@ class HelloWorld
 
     public function __construct()
     {
+        session_start();
         $this->message = "Yo Bro";
     }
 
     public function index()
     {
+
         $this->product = new product();
         $this->products = $this->product->getAllProducts();
 
@@ -26,12 +28,22 @@ class HelloWorld
 
     public function about()
     {
-        return view('about');
+        if (isset($_SESSION['id'])){
+            return view('about');
+        } else {
+            header('Location: route.php?page=login&&message=Please Login.');
+        }
+        
     }
 
     public function contact()
     {
         return view('contact');
+    }
+
+    public function gallery()
+    {
+        return view('gallery');
     }
 
     public function Login()
